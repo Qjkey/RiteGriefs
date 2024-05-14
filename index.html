@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<script src="https://api.trademc.org/trademcapi.js"></script>
+<script>
+    function showMessage() {
+        navigator.clipboard.writeText('mc.ritegrief.pw')
+    }
+    TrademcAPI.GetOnline({"Shop":"218281","TextMask":"{players}/{max_players}"});
+</script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+    body {
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-image: url('images/Image\ Background.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .novbar {
+        width: 100%;
+        background: white;
+        display: flex;
+        padding: 15px 27px;
+    }
+
+    .novbar a,
+    .novbar p {
+        position: relative;
+        display: flex;
+        font-size: 24px;
+        color: rgb(136, 136, 136);
+        text-decoration: none;
+        margin: 10px 15px;
+        vertical-align: middle;
+    }
+
+    .novbar a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 3px;
+        background: red;
+        transform: scaleX(0);
+    }
+
+    .novbar p:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 3px;
+        background: red;
+    }
+
+    .novbar a:hover::after {
+        transform: scaleX(1);
+    }
+
+    .IP {
+        color: rgb(136, 136, 136);
+        text-decoration: none;
+        font-size: 24px;
+    }
+
+    .IP2 {
+        color: rgb(255, 0, 0);
+        text-decoration: none;
+        font-size: 24px;
+    }
+
+    .is {
+        font-size: 20px;
+    }
+
+    .img1 {
+        margin-top: auto;
+        position: fixed;
+        margin-top: auto;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .btn {
+        font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+        width: 190px;
+        height: 40px;
+        border: none;
+        background: #fb4d05;
+        border-radius: 40px;
+        color: white;
+        box-shadow: inset 1px 1px 3px -1px rgba(0, 0, 0, 0.6);
+    }
+
+    .Wripp {
+        position: relative;
+        width: 400px;
+        height: 250px;
+        background: rgb(255, 255, 255);
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .Vripp {
+        padding: 60px 0px;
+    }
+
+    .Vripp2 {
+        padding: 30px 0px;
+    }
+
+    .input1 {
+        width: 190px;
+        height: 40px;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 5px;
+    }
+
+    input[type=text] {
+        padding: 10px;
+    }
+</style>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <title>Главная</title>
+    </head>
+    <body>
+        <nav class="novbar">
+            <img width="50px" src='images/Image Logo server.png' alt='image'>
+            <p>Главная</p>
+            <a href="https://ritegrief.easydonate.ru">Товары</a>
+            <a href="Rules.html">Правила</a>
+        </nav>
+        <br>
+        <br>
+        <p class="IP">IP: <a class="IP2" onclick="showMessage()" href="">mc.ritegrief.pw</a> (1.16.5)</p>
+        <br>
+        <br>
+        <div class="Wripp">
+            <div class="Vripp">
+                <input placeholder="Введите ваш никнейм" maxlength="16" type="text" name="name" class="input1">
+            </div>
+            <div class="Vripp2">
+                <a href="https://ritegrief.easydonate.ru"><button class="btn">Посмотреть товары</button></a>
+            </div>
+        </div>
+        <br>
+        <div>
+            <a href="https://t.me/ritegrief"><img width="50px" src='icons/Icon Telegram.png' alt='image'></a>
+            <a href="https://vk.com/ritegrief"><img width="50px" src='icons/Icon VK.png' alt='image'></a>
+            <a href="https://discord.gg/DTgbECa5qC"><img width="50px" src='icons/Icon Discord.png' alt='image'></a>
+        </div>
+        <div id="trademc-online" class="img1"></div>
+    </body>
+</html>
